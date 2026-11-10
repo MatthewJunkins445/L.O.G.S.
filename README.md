@@ -16,7 +16,7 @@ L.O.G.S. is a desktop security monitoring application built with Tauri, React, a
 ```text
 L.O.G.S/
   src/                  React frontend
-  src/pages/            Dashboard, Scanner, Firewall, and       Monitor tabs
+  src/pages/            Dashboard, Scanner, Firewall, and Monitor tabs
   src/components/       Shared UI components
   src-tauri/            Tauri desktop shell and Rust sidecar launcher
   python-backend/       Backend and security logic
