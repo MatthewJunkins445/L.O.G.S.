@@ -1,0 +1,265 @@
+/* src/pages/Scanner.css */
+
+.error-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.btn-retry {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid #b91c1c;
+  color: #b91c1c;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.btn-retry:hover    { background: #b91c1c; color: #fff; }
+.btn-retry:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.scanner-page {
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Scan Configuration */
+.scan-config {
+  background: white;
+}
+
+.profile-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.profile-card {
+  border: 2px solid #ddd;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+}
+
+.profile-card:hover {
+  border-color: #3498db;
+  background: #f8f9fa;
+}
+
+.profile-card.selected {
+  border-color: #3498db;
+  background: #eef6fc;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.profile-header input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.profile-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.profile-description {
+  font-size: 13px;
+  color: #5d6d7e;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.profile-duration {
+  font-size: 12px;
+  color: #95a5a6;
+  font-style: italic;
+}
+
+.scan-actions {
+  text-align: center;
+  padding-top: 8px;
+}
+
+.btn-scan-large {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 40px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-scan-large:hover {
+  background: #229954;
+}
+
+.btn-scan-large:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* Scan Info */
+.scan-info {
+  background: #fafafa;
+  border-left: 4px solid #3498db;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 12px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.info-value {
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.info-value.code {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #5d6d7e;
+}
+
+/* Stats with color coding */
+.critical-stat {
+  border-left: 4px solid #e74c3c;
+}
+
+.warning-stat {
+  border-left: 4px solid #f39c12;
+}
+
+.ok-stat {
+  border-left: 4px solid #27ae60;
+}
+
+/* Critical Ports Alert */
+.alert-critical {
+  border-left: 4px solid #e74c3c;
+  background: #fef5f1;
+}
+
+.alert-message {
+  padding: 12px;
+  background: #fadbd8;
+  border: 1px solid #f1948a;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #7b241c;
+  line-height: 1.6;
+}
+
+.critical-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.critical-item {
+  padding: 12px;
+  background: white;
+  border: 1px solid #f1948a;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.port-num {
+  font-weight: 700;
+  color: #c0392b;
+  font-family: 'Courier New', monospace;
+  font-size: 15px;
+  min-width: 80px;
+}
+
+.port-service {
+  font-weight: 600;
+  color: #2c3e50;
+  flex: 1;
+}
+
+.port-version {
+  font-size: 13px;
+  color: #7f8c8d;
+  font-family: 'Courier New', monospace;
+}
+
+/* Ports Table */
+.ports-table tbody tr.critical-row {
+  background: #fef5f1;
+  border-left: 3px solid #e74c3c;
+}
+
+.ports-table tbody tr.risky-row {
+  background: #fef9f3;
+  border-left: 3px solid #f39c12;
+}
+
+.service-name {
+  font-weight: 500;
+}
+
+.no-ports {
+  text-align: center;
+  padding: 40px;
+  color: #27ae60;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .profile-selector {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

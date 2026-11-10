@@ -1,0 +1,9 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+python-nmap==0.7.1
+scapy
+scikit-learn
+numpy
+joblib
+setuptools<81; platform_system == "Windows"
+win10toast==0.9; platform_system == "Windows"
